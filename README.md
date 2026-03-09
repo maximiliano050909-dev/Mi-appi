@@ -19,3 +19,4 @@ Una vez configurado el entorno, se creó una ruta básica en la API para verific
 **Resultado de la API ejecutándose en el navegador**
 
 ![Resultado en navegador](img/1.2.png)
+

@@ -1,6 +1,9 @@
 # app/routes/__init__.py
 from flask import Blueprint, jsonify
 from datetime import datetime
+from .estudiantes import estudiantes_bp
+from .calificaciones import cal_bp
+
 
 # Blueprint: es como un modulo de rutas que se puede registrar en la app
 main_bp = Blueprint('main', __name__)
@@ -25,3 +28,6 @@ def health_check():
         "timestamp": datetime.now().isoformat(),
         "base_de_datos": "Conectada"
     }), 200
+    
+    # REGISTRAR LAS RUTAS DE ESTUDIANTES
+main_bp.register_blueprint(estudiantes_bp)
